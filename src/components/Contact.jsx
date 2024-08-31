@@ -25,7 +25,7 @@ export const Contact = () => {
     <section id="contact" className="py-20 bg-gray-100">
       <div className="container mx-auto px-5">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-10">
-          Contáctame
+          Contact me
         </h2>
         <form
           onSubmit={handleSubmit}

@@ -1,26 +1,26 @@
 export const NavBar = () => {
   return (
-    <nav className="bg-violet-950 p-4 flex justify-between items-center sticky top-0 z-50">
-      <div className="text-white text-lg font-bold">Kevin</div>
+    <nav className="text-white bg-violet-950 px-10 py-3 flex justify-between items-center sticky top-0 z-50">
+      <div className="text-lg font-bold">Kevin</div>
       <div>
-        <ul className="flex space-x-8">
+        <ul className="flex space-x-10">
           <li>
-            <a href="#portfolio" className="text-white hover:text-gray-300">
-              Portafolio
+            <a href="#top" className=" hover:text-gray-300">
+              Portfolio
             </a>
           </li>
           <li>
-            <a href="#skills" className="text-white hover:text-gray-300">
+            <a href="#skills" className=" hover:text-gray-300">
               Skills
             </a>
           </li>
           <li>
-            <a href="#projects" className="text-white hover:text-gray-300">
+            <a href="#projects" className=" hover:text-gray-300">
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-white hover:text-gray-300">
+            <a href="#contact" className=" hover:text-gray-300">
               Contact me
             </a>
           </li>
