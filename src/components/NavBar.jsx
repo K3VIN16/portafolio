@@ -6,7 +6,7 @@ export const NavBar = () => {
         <ul className="flex space-x-10">
           <li>
             <a href="#top" className=" hover:text-gray-300">
-              Portfolio
+              Home
             </a>
           </li>
           <li>

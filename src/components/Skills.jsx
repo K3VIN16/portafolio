@@ -1,7 +1,6 @@
 import React from "react";
 import imgJavascript from "../assets/skillLogos/javascript.png";
-// import html from "../assets/skillLogos/html_css.png";
-import imgHtmlCss from "../assets/skillLogos/html.jpg";
+import imgHtmlCss from "../assets/skillLogos/html_css.jpg";
 import imgReact from "../assets/skillLogos/react.webp";
 import imgTailwind from "../assets/skillLogos/tailwind.webp";
 import imgJava from "../assets/skillLogos/java.png";
