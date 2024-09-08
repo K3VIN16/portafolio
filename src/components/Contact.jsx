@@ -22,9 +22,9 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
+    <section id="contact" className="py-10">
       <div className="container mx-auto px-5">
-        <h2 className="text-4xl font-bold text-gray-800 text-center mb-10">
+        <h2 className="text-4xl font-bold text-gray-50 text-center mb-10">
           Contact me
         </h2>
         <form

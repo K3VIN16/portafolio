@@ -1,42 +1,45 @@
 import React from "react";
 
+// Componente reutilizable para los enlaces del footer
+const FooterLink = ({ href, iconClass }) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-300 hover:text-gray-100"
+    >
+      <i className={`${iconClass} fa-2x`}></i>
+    </a>
+  );
+};
+
 export const Footer = () => {
   return (
-    <footer className="bg-violet-950 text-white py-8 mt-12">
+    <footer
+      className="bg-violet-950 text-white py-6 mt-10"
+      style={{
+        borderTop: "2px solid", // Cambiar el borde a la parte superior
+        borderImage:
+          "linear-gradient(to right, rgba(128, 0, 128, 0.4), rgba(128, 0, 128, 1), rgba(128, 0, 128, 0.4)) 1",
+      }}
+    >
       <div className="flex justify-center space-x-4">
-        <a
+        <FooterLink
           href="https://www.linkedin.com/in/kevin-andrés-tarqui-tapia-864212271/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-gray-300"
-        >
-          <i className="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a
+          iconClass="fab fa-linkedin"
+        />
+        <FooterLink
           href="https://github.com/K3VIN16"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-gray-300"
-        >
-          <i className="fab fa-github fa-2x"></i>
-        </a>
-        {/* <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-gray-300"
-        >
-          <i className="fab fa-twitter fa-2x"></i>
-        </a> */}
-        <a
+          iconClass="fab fa-github"
+        />
+        <FooterLink
           href="https://www.instagram.com/kevin.tarqui16/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-gray-300"
-        >
-          <i className="fab fa-instagram fa-2x"></i>
-        </a>
+          iconClass="fab fa-instagram"
+        />
       </div>
     </footer>
   );
 };
+
+export default Footer;

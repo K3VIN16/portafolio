@@ -1,12 +1,13 @@
 import React from "react";
+import perfil from "../assets/photos/perfil.jpg";
 
 function ProfileImage() {
   return (
-    <div className="flex justify-center mr-7 mb-4">
+    <div className="flex justify-center">
       <img
-        src=""
+        src={perfil}
         alt="Perfil"
-        className="w-64 h-64 mx-auto md:mx-0 rounded-full border-4 border-gray-300"
+        className="w-72 h-72 mx-auto md:mx-0 rounded-full border-4 border-gray-300"
       />
     </div>
   );
