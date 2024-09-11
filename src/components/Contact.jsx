@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Laybel from "../assets/laybel/Laybel.jsx";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,11 +23,9 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-10">
+    <section id="contact" className="pt-10">
       <div className="container mx-auto px-5">
-        <h2 className="text-4xl font-bold text-gray-50 text-center mb-10">
-          Contact me
-        </h2>
+        <Laybel>Contact me</Laybel>
         <form
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto bg-white bg-opacity-80 p-6 rounded-lg shadow-lg"

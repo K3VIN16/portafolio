@@ -1,4 +1,5 @@
 import React from "react";
+import Laybel from "../assets/laybel/Laybel.jsx";
 import imgJavascript from "../assets/logos/javascript.png";
 import imgHtmlCss from "../assets/logos/html_css.jpg";
 import imgReact from "../assets/logos/react.webp";
@@ -68,7 +69,7 @@ export const Skills = () => {
   return (
     <section id="skills" className="pt-20 pb-20">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-50 mb-10 mt-6">Skills</h2>
+        <Laybel>Skills</Laybel>
         <ul className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-9">
           {skills.map((skill, index) => (
             <li

@@ -16,13 +16,13 @@ export const Header = () => {
         loop
       />
 
-      <section className="absolute top-0 left-0 w-full h-full bg-black opacity-40 -z-5" />
+      <section className="absolute top-0 left-0 w-full h-full bg-black opacity-45 -z-5" />
 
       <div className="relative max-w-screen-lg mx-auto flex flex-col gap-6 md:flex-row items-center justify-center h-full">
         <ProfileImage />
 
         <section className="md:w-3/5 text-left z-10">
-          <div className="bg-purple-100 bg-opacity-85 p-6 rounded-br-3xl border-b-2 border-r-2 border-violet-500">
+          <div className="bg-purple-100 bg-opacity-90 p-6 rounded-br-3xl border-b-2 border-r-2 border-violet-500">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
               Hola, soy <span>[Kevin Tarqui]</span>
             </h1>

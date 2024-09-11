@@ -1,4 +1,5 @@
 import React from "react";
+import Laybel from "../assets/laybel/Laybel.jsx";
 
 const projects = [
   {
@@ -50,10 +51,8 @@ export const Projects = () => {
   return (
     <section id="projects" className="pt-20 pb-24">
       <div className="container mx-auto px-5">
-        <h2 className="text-4xl font-bold text-gray-50 text-center mb-10">
-          Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-6">
+        <Laybel>Projects</Laybel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-6 px-2">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

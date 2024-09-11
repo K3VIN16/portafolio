@@ -20,10 +20,7 @@ export const NavBar = () => {
 
       {/* Botón de menú para dispositivos móviles */}
       <div className="sm:hidden">
-        <button
-          onClick={toggleMenu}
-          className="text-white focus:outline-none"
-        >
+        <button onClick={toggleMenu} className="text-white focus:outline-none">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -78,25 +75,31 @@ export const NavBar = () => {
 
       {/* Menú desplegable para dispositivos móviles */}
       {isOpen && (
-        <div className="absolute top-14 left-0 w-full bg-violet-950 sm:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4">
+        <div className="absolute top-12 left-0 w-full bg-violet-950 sm:hidden">
+          <ul className="flex flex-col items-end space-y-4 py-4 pr-4">
             <li>
-              <a href="#top" className="hover:text-gray-300">
+              <a href="#top" className="hover:text-gray-300 hover:underline">
                 Home
               </a>
             </li>
             <li>
-              <a href="#skills" className="hover:text-gray-300">
+              <a href="#skills" className="hover:text-gray-300 hover:underline">
                 Skills
               </a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-gray-300">
+              <a
+                href="#projects"
+                className="hover:text-gray-300 hover:underline"
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-gray-300">
+              <a
+                href="#contact"
+                className="hover:text-gray-300 hover:underline"
+              >
                 Contact me
               </a>
             </li>
