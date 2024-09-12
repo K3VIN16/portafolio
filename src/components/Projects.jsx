@@ -4,18 +4,19 @@ import imgPortafolio from "../assets/photos/imgPortafolio.jpg";
 import { useInView } from "react-intersection-observer";
 import "../assets/effect/projects.css";
 
+//Atributos de los proyectos realizados
 const projects = [
   {
     title: "Portafolio Personal",
     description:
       "Este portafolio es una representación de mis habilidades en desarrollo web y programación. Cada proyecto refleja mi dedicación y experiencia en la creación de soluciones digitales.",
     link1: "/",
-    link2: "/",
+    link2: "https://github.com/K3VIN16/portafolio",
     image: imgPortafolio,
   },
   {
-    title: "Proyecto 2",
-    description: "Descripción del Proyecto 2.",
+    title: "Ecomerse",
+    description: "Simulacion de un Ecomerse realizado con Vite, React y tailwind, ",
     link1: "#",
     link2: "#",
     image: "/images/project2.png",

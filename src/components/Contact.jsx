@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Laybel from "../assets/laybel/Laybel.jsx";
+import emailjs from "emailjs-com";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+
+  const [sent, setSent] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -17,9 +20,31 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form data submitted:", formData);
-    // Aquí puedes agregar la lógica para enviar el formulario a tu servidor o API
-    setFormData({ name: "", email: "", message: "" });
+
+    // Ajusta los nombres de las variables para que coincidan con el template de EmailJS
+    const templateParams = {
+      to_name: "Kevin Tarqui",
+      from_name: formData.name,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_0i47x5h",
+        "template_4ul3om4",
+        templateParams,
+        "8tS5sfCcv-pvyWPje"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSent(true);
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
   };
 
   return (
@@ -30,12 +55,17 @@ export const Contact = () => {
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto bg-white bg-opacity-80 p-6 rounded-lg shadow-lg"
         >
+          {sent && (
+            <div className="text-green-500 text-center mb-4">
+              ¡Mensaje enviado exitosamente!
+            </div>
+          )}
           <div className="mb-4">
             <label
               htmlFor="name"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Nombre:
+              Name:
             </label>
             <input
               type="text"
@@ -43,6 +73,7 @@ export const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              placeholder="Juan Pérez"
               className="w-full px-3 py-2 border border-gray-300 rounded-md"
               required
             />
@@ -52,7 +83,7 @@ export const Contact = () => {
               htmlFor="email"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Email:
+              Email address:
             </label>
             <input
               type="email"
@@ -60,6 +91,7 @@ export const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="example@gmail.com"
               className="w-full px-3 py-2 border border-gray-300 rounded-md"
               required
             />
@@ -69,7 +101,7 @@ export const Contact = () => {
               htmlFor="message"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Mensaje:
+              Message:
             </label>
             <textarea
               id="message"
