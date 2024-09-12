@@ -1,12 +1,13 @@
 import React from "react";
-import ProfileImage from "./ProfileImage.jsx";
 import video from "../assets/video/fondoHeader.mp4";
+import ProfileImage from "./ProfileImage.jsx";
+import "../assets/effect/header.css";
 
 export const Header = () => {
   return (
     <header
       id="portfolio"
-      className="relative overflow-hidden text-center h-screen px-5"
+      className="relative overflow-hidden text-center h-screen px-5 border-b-4 border-bottom-pulse"
     >
       <video
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
@@ -30,13 +31,16 @@ export const Header = () => {
               <span>Software Developer</span>
             </b>
             <p className="text-base sm:text-lg text-justify font-medium mt-1">
-              Busco integrarme en una empresa destacada en su sector, donde pueda aplicar mis habilidades y conocimientos, contribuyendo al éxito del equipo mientras desarrollo mi carrera profesional.
+              Busco integrarme en una empresa destacada en su sector, donde
+              pueda aplicar mis habilidades y conocimientos, contribuyendo al
+              éxito del equipo mientras desarrollo mi carrera profesional.
             </p>
 
-            <a href="#skills">
-              <button className="mt-6 px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700">
-                <p>Skills</p>
-              </button>
+            <a
+              href="#skills"
+              className="mt-4 px-6 py-3 inline-block bg-purple-600 text-white rounded-full hover:bg-purple-700"
+            >
+              Skills
             </a>
           </div>
         </section>

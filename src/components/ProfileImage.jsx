@@ -8,7 +8,7 @@ function ProfileImage() {
       <img
         src={perfil}
         alt="Perfil"
-        className="w-72 h-72 mx-auto md:mx-0 rounded-full border-4 border-gray-300"
+        className="w-56 h-56 md:w-72 md:h-72 mx-auto md:mx-0 md:my-0 rounded-full border-4 border-gray-300"
       />
     </div>
   );
