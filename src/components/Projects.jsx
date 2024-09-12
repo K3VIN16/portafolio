@@ -1,6 +1,7 @@
 import React from "react";
 import Laybel from "../assets/laybel/Laybel.jsx";
 import imgPortafolio from "../assets/photos/imgPortafolio.jpg";
+import imgEcomerce from "../assets/photos/imgEcomerce.jpg";
 import { useInView } from "react-intersection-observer";
 import "../assets/effect/projects.css";
 
@@ -15,18 +16,12 @@ const projects = [
     image: imgPortafolio,
   },
   {
-    title: "Ecomerse",
-    description: "Simulacion de un Ecomerse realizado con Vite, React y tailwind, ",
+    title: "Simulador de E-commerce",
+    description:
+      "Proyecto en desarrollo que simula un e-commerce utilizando Vite, React y Tailwind CSS. Integra una API para la gestión de productos, proporcionando una experiencia de compra realista y fluida. El proyecto está a mitad de su desarrollo, con varias funcionalidades clave ya implementadas, como la visualización de productos y un carrito de compras dinámico.",
     link1: "#",
-    link2: "#",
-    image: "/images/project2.png",
-  },
-  {
-    title: "Proyecto 3",
-    description: "Descripción del Proyecto 3.",
-    link1: "#",
-    link2: "#",
-    image: "/images/project3.png",
+    link2: "https://github.com/K3VIN16/ecomerce",
+    image: imgEcomerce,
   },
 ];
 
@@ -56,21 +51,23 @@ const ProjectCard = ({ title, description, link1, link2, image }) => {
       </div>
       <div className="flex justify-between mt-4">
         <a
-          href={link1}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700"
-        >
-          Ver Proyecto
-        </a>
-        <a
           href={link2}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700"
         >
-          Ver Repositorio
+          Repositorio
         </a>
+        {link1 !== "#" && (
+          <a
+            href={link1}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700"
+          >
+            Ver Proyecto
+          </a>
+        )}
       </div>
     </div>
   );
@@ -81,7 +78,7 @@ export const Projects = () => {
     <section id="projects" className="pt-20 pb-24">
       <div className="container mx-auto px-5">
         <Laybel>Projects</Laybel>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-8 py-6 px-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-14 gap-y-8 py-6 px-2 lg:mx-20 lg:gap-x-28">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
