@@ -1,5 +1,5 @@
 import perfil from "../assets/logos/logo1.jpeg";
-import "../assets/effect/profileImage.css"
+import "../assets/effect/profileImage.css";
 
 function ProfileImage() {
   return (

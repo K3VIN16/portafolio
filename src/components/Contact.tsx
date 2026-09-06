@@ -19,7 +19,7 @@ export const Contact = () => {
   const [sent, setSent] = useState(false);
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -42,7 +42,7 @@ export const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY },
       )
       .then(
         (response) => {
@@ -52,7 +52,7 @@ export const Contact = () => {
         },
         (err) => {
           console.log("FAILED...", err);
-        }
+        },
       );
   };
 
