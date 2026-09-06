@@ -17,7 +17,7 @@ export default tseslint.config(
         ecmaFeatures: { jsx: true },
       },
     },
-    settings: { react: { version: '18.3' } },
+    settings: { react: { version: '19.2' } },
     plugins: {
       react,
       'react-hooks': reactHooks,

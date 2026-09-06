@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import Laybel from "../assets/laybel/Laybel.tsx";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 interface ContactFormData {
   name: string;
@@ -39,10 +39,10 @@ export const Contact = () => {
 
     emailjs
       .send(
-        "service_0i47x5h",
-        "template_4ul3om4",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        "8tS5sfCcv-pvyWPje"
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       )
       .then(
         (response) => {
