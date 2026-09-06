@@ -1,7 +1,10 @@
-import React from "react";
+interface FooterLinkProps {
+  href: string;
+  iconClass: string;
+}
 
 // Componente reutilizable para los enlaces del footer
-const FooterLink = ({ href, iconClass }) => {
+const FooterLink = ({ href, iconClass }: FooterLinkProps) => {
   return (
     <a
       href={href}

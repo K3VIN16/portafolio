@@ -1,9 +1,16 @@
-import React, { useState } from "react";
-import Laybel from "../assets/laybel/Laybel.jsx";
+import { useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
+import Laybel from "../assets/laybel/Laybel.tsx";
 import emailjs from "emailjs-com";
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     message: "",
@@ -11,14 +18,16 @@ export const Contact = () => {
 
   const [sent, setSent] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Ajusta los nombres de las variables para que coincidan con el template de EmailJS
@@ -108,7 +117,7 @@ export const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              rows="4"
+              rows={4}
               className="w-full px-3 py-2 border border-gray-300 rounded-md"
               required
             ></textarea>
